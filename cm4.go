@@ -4,8 +4,9 @@ import (
 	"hash/maphash"
 )
 
-// CM4 is a small conservative-update count-min sketch implementation with 4-bit counters. This provides an estimation
-// of the relative frequency of items. The zero value is usable, and tuned for 32-bits numbers.
+// CM4 is a small conservative-update count-min sketch implementation with 4-bit counters.
+// This provides an estimation of the relative frequency of items.
+// The zero value is usable, and tuned for 32-bits numbers.
 type CM4 struct {
 	nyb [width * depth / 2]byte
 	h   maphash.Hash
